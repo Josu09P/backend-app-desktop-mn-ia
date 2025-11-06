@@ -1,5 +1,5 @@
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import nltk
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer # pyright: ignore[reportMissingImports]
+import nltk # pyright: ignore[reportMissingImports]
 
 nltk.download('vader_lexicon', quiet=True)
 analyzer = SentimentIntensityAnalyzer()

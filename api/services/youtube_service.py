@@ -1,7 +1,7 @@
-from googleapiclient.discovery import build
+from googleapiclient.discovery import build # pyright: ignore[reportMissingImports]
 import time
 
-YOUTUBE_API_KEY = "AIzaSyAj4oNLeM8rGltKLfxyqyVwNMMNoeE61aE"
+YOUTUBE_API_KEY = "AIzaSyDjjc5tFGYxn2U2iB2LGrR6-GGbuRSir2g"
 
 def obtener_datos_video(video_id):
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)

@@ -6,6 +6,14 @@ import pandas as pd # pyright: ignore[reportMissingModuleSource]
 
 youtube_bp = Blueprint("youtube", __name__, url_prefix="/api")
 
+@youtube_bp.after_request
+def add_cors_headers(response):
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Headers", "Content-Type,Authorization")
+    response.headers.add("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
+    return response
+
+
 @youtube_bp.route("/health", methods=["GET"])
 def health():
     return jsonify({"ok": True, "timestamp": datetime.now().isoformat()})
