@@ -5,3 +5,4 @@ vaderSentiment
 nltk
 pandas
 numpy
+stopwords
