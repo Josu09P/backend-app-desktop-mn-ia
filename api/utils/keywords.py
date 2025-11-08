@@ -1,18 +1,19 @@
 import nltk
-from nltk.corpus import stopwords
 from collections import Counter
 import re
 
-# FIX: Capturamos LookupError, que es la excepción correcta cuando un recurso de NLTK no se encuentra.
+# Verificamos si las stopwords están descargadas
 try:
-    # Verificamos si las stopwords están descargadas
     nltk.data.find('corpora/stopwords')
 except LookupError:
-    # Si no están, las descargamos de forma silenciosa.
     nltk.download('stopwords', quiet=True)
+
+# Ahora sí importamos stopwords después de asegurarnos de que existe
+from nltk.corpus import stopwords
 
 # Lista de stopwords en español
 spanish_stopwords = set(stopwords.words('spanish'))
+
 
 def obtener_palabras_clave(comentarios, top_n=10):
     """
