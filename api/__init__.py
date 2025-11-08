@@ -13,6 +13,5 @@ def create_app():
     from api.routes.cluster_routes import cluster_bp
     app.register_blueprint(youtube_bp)
     app.register_blueprint(rl_multiple_bp)
-    app.register_blueprint(cluster_bp)
-
+    app.register_blueprint(cluster_bp, url_prefix="/api/cluster")
     return app
