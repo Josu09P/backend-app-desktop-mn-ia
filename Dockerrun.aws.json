@@ -6,18 +6,7 @@
   },
   "Ports": [
     {
-      "ContainerPort": "5000"
-    }
-  ],
-  "Logging": "/var/log/app",
-  "Volumes": [
-    {
-      "HostDirectory": "/var/app/db",
-      "ContainerDirectory": "/app/api/db"
-    },
-    {
-      "HostDirectory": "/var/app/models", 
-      "ContainerDirectory": "/app/api/models"
+      "ContainerPort": 5000
     }
   ]
 }
