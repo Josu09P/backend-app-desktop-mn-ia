@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "Image": {
+    "Name": "python:3.9-slim",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "5000"
+    }
+  ],
+  "Logging": "/var/log/app",
+  "Volumes": [
+    {
+      "HostDirectory": "/var/app/db",
+      "ContainerDirectory": "/app/api/db"
+    },
+    {
+      "HostDirectory": "/var/app/models", 
+      "ContainerDirectory": "/app/api/models"
+    }
+  ]
+}
