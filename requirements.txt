@@ -12,3 +12,7 @@ google-auth-oauthlib
 google-auth-httplib2
 vaderSentiment
 sklearn
+cryptography
+opencv-python
+face-recognition
+python-dotenv
