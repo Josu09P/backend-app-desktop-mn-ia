@@ -1,4 +1,4 @@
-# application.py - en la raíz del proyecto
+# application.py
 from api import create_app
 
 application = create_app()
