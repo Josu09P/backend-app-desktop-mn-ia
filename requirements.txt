@@ -1,20 +1,20 @@
-flask==2.3.3
-flask-cors==4.0.0
-pandas==2.0.3
-numpy==1.24.3
-scikit-learn==1.3.0
-joblib==1.3.2
-nltk==3.8.1
-textblob==0.17.1
-google-api-python-client==2.108.0
-google-auth==2.23.3
-google-auth-oauthlib==1.1.0
-google-auth-httplib2==0.1.1
-vaderSentiment==3.3.2
-cryptography==41.0.4
-opencv-python-headless==4.8.1.78  # ← Cambia a headless para servidor
-face-recognition==1.3.0
-python-dotenv==1.0.0
-gunicorn==21.2.0  # ← Añade gunicorn para producción
-ultralytics==8.0.186  # ← Para YOLO
-Pillow==10.0.1  # ← Para procesamiento de imágenes
+flask
+flask-cors
+gunicorn
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+joblib
+nltk
+textblob
+vaderSentiment
+ultralytics
+opencv-python-headless
+face-recognition
+Pillow
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+cryptography
+python-dotenv
