@@ -31,21 +31,21 @@ def migrate_embeddings():
             # Actualizar el usuario
             user["embedding"] = encrypted_b64
             migrated_count += 1
-            print(f"✅ Migrado usuario: {user['user_id']}")
+            print(f"Migrado usuario: {user['user_id']}")
     
     if migrated_count > 0:
         # Guardar backup primero
         backup_path = DB_PATH + ".backup"
         with open(backup_path, "w") as f:
             json.dump(users, f, indent=2)
-        print(f"✅ Backup guardado en: {backup_path}")
+        print(f"Backup guardado en: {backup_path}")
         
         # Guardar datos migrados
         with open(DB_PATH, "w") as f:
             json.dump(users, f, indent=2)
-        print(f"✅ Migración completada: {migrated_count} usuarios actualizados")
+        print(f"Migración completada: {migrated_count} usuarios actualizados")
     else:
-        print("ℹ️ No se encontraron embeddings para migrar")
+        print("No se encontraron embeddings para migrar")
 
 if __name__ == "__main__":
     migrate_embeddings()

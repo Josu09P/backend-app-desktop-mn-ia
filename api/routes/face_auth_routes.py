@@ -1,5 +1,5 @@
 # api/routes/face_auth_routes.py
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify # pyright: ignore[reportMissingImports]
 import json, os
 import numpy as np
 from api.utils.token_manager import generate_token
@@ -69,7 +69,7 @@ def register_facial():
     users.append(new_user)
     save_users(users)
 
-    print(f"✅ Usuario {user_id} registrado. Total usuarios: {len(users)}")
+    print(f"Usuario {user_id} registrado. Total usuarios: {len(users)}")
     return jsonify({
         "success": True,
         "message": "Usuario registrado exitosamente", 
@@ -128,7 +128,7 @@ def login_facial():
                 
                 if distance < 0.6:  # Umbral típico
                     token = generate_token(user["user_id"])
-                    print(f"✅ ACCESO CONCEDIDO: {user['user_id']} (distancia: {distance:.4f})")
+                    print(f"ACCESO CONCEDIDO: {user['user_id']} (distancia: {distance:.4f})")
                     return jsonify({
                         "success": True,
                         "message": "Acceso concedido",
@@ -136,7 +136,7 @@ def login_facial():
                         "user_id": user["user_id"]
                     }), 200
                 else:
-                    print(f"❌ Distancia muy alta para {user['user_id']}: {distance:.4f}")
+                    print(f"Distancia muy alta para {user['user_id']}: {distance:.4f}")
                     
         except Exception as e:
             print(f"Error procesando usuario {user['user_id']}: {e}")

@@ -99,7 +99,7 @@ def calculate_face_distance(embedding_a: np.ndarray, embedding_b: np.ndarray) ->
         
         # Verificar dimensiones
         if embedding_a.shape != embedding_b.shape:
-            print(f"⚠️ Dimensiones diferentes: {embedding_a.shape} vs {embedding_b.shape}")
+            print(f"Dimensiones diferentes: {embedding_a.shape} vs {embedding_b.shape}")
             return 1.0
             
         distances = face_recognition.face_distance([embedding_a], embedding_b)

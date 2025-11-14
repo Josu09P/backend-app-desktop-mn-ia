@@ -1,5 +1,5 @@
-from flask import Blueprint, request, jsonify
-import pandas as pd
+from flask import Blueprint, request, jsonify # type: ignore
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
 from api.services.clustering_service import KMeansService
 
 cluster_bp = Blueprint("cluster", __name__)
